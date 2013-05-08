@@ -1,4 +1,28 @@
-Herokuapp::Application.routes.draw do
+MyNewApp::Application.routes.draw do
+  #get "home/about"
+  match "about" => "home#about"
+  
+  #get "home/contact"
+  match "contact" => "home#contact"
+  
+  #get "home/index"
+  match "index" => "home#index"
+  
+  #get "home/hml"
+  match "hml" => "home#hml"
+  
+  #get "home/product"
+  match "products" => "home#product"
+  
+  #get "home/portfolio"
+  match "portfolio" => "home#portfolio"
+  
+  #get "home/service"
+  match "services" => "home#service"
+  
+  #get "home/carrer"
+  match "career" => "home#career"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +72,7 @@ Herokuapp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'home#index'
 
   # See how all your routes lay out with "rake routes"
 
